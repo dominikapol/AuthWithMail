@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1t2-l7-yzn">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--User Info View Controller-->
+        <scene sceneID="rpV-mr-Pav">
+            <objects>
+                <viewController storyboardIdentifier="UserInfoViewController" id="1t2-l7-yzn" customClass="UserInfoViewController" customModule="FirebaseTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dHv-Ld-GZd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="EZT-7e-eKO">
+                                <rect key="frame" x="0.0" y="44" width="414" height="768"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="1t2-l7-yzn" id="GXw-xM-Mcx"/>
+                                    <outlet property="delegate" destination="1t2-l7-yzn" id="XEK-q1-bZU"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="okj-1P-SJ5">
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6o5-wO-O9o"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add Car"/>
+                                <connections>
+                                    <action selector="addCarButtonPressed" destination="1t2-l7-yzn" eventType="touchUpInside" id="Jxu-wY-DIl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lO1-Lq-3c2"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EZT-7e-eKO" firstAttribute="leading" secondItem="lO1-Lq-3c2" secondAttribute="leading" id="6O2-KK-VPI"/>
+                            <constraint firstItem="lO1-Lq-3c2" firstAttribute="trailing" secondItem="EZT-7e-eKO" secondAttribute="trailing" id="8nY-XQ-hVo"/>
+                            <constraint firstItem="lO1-Lq-3c2" firstAttribute="bottom" secondItem="okj-1P-SJ5" secondAttribute="bottom" id="MhK-aU-uoa"/>
+                            <constraint firstItem="okj-1P-SJ5" firstAttribute="leading" secondItem="lO1-Lq-3c2" secondAttribute="leading" id="ZZb-gX-tV8"/>
+                            <constraint firstItem="EZT-7e-eKO" firstAttribute="top" secondItem="lO1-Lq-3c2" secondAttribute="top" id="fng-c4-DzX"/>
+                            <constraint firstItem="okj-1P-SJ5" firstAttribute="top" secondItem="EZT-7e-eKO" secondAttribute="bottom" id="gaL-hr-Blv"/>
+                            <constraint firstItem="lO1-Lq-3c2" firstAttribute="trailing" secondItem="okj-1P-SJ5" secondAttribute="trailing" id="hDc-3y-WOD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="EZT-7e-eKO" id="oxn-Pn-22i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J7B-uH-bVm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="111.59420289855073" y="88.392857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

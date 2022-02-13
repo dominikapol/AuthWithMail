@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  FirebaseTest
 //
-//  Created by Vladislav on 29.11.21.
+//  Created Dominika Poleschuk on 11.02.22.
 //
 
 import UIKit
